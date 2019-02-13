@@ -7,12 +7,12 @@
 [.details]
 --
 *Version*: 0.1
-*Date*: 2019-02-05
+*Date*: 2019-02-14
 --
 
 :!hardbreaks:
 
-Test suite
+Test suite helper library
 
 == Components
 
@@ -20,3 +20,6 @@ Test suite
 
 == Logging Test
 
+Add a logger spy that will capture log request to the logging API. +
+It currently supports the log4j2 implementation. +
+Additionally, a Junit 5 Jupiter extension is exposed for test harnesses.
