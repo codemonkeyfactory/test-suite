@@ -6,6 +6,7 @@ plugins {
     kotlin("kapt")
     id("org.unbroken-dome.test-sets")
     jacoco
+    id("maven-publish")
 }
 
 val integrationTestName = "integrationTest"
@@ -86,5 +87,31 @@ tasks {
 
     getByName("check") {
         dependsOn(integrationTest)
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("loggingTest") {
+            artifactId = "logging-test"
+            from(components["java"])
+            pom {
+                name.set("Logging Test")
+                description.set("Logging Test Support Library")
+                url.set("https://github.com/codemonkeyfactory/test-suite")
+                developers {
+                    developer {
+                        id.set("kiongku")
+                        name.set("Wai Keung Yiu Man Lung")
+                        email.set("kiongku@users.noreply.github.com")
+                    }
+                }
+                scm {
+                    url.set("https://github.com/codemonkeyfactory/test-suite")
+                    connection.set("scm:git:git://github.com/codemonkeyfactory/test-suite.git")
+                    developerConnection.set("scm:git:git@github.com:codemonkeyfactory/test-suite.git")
+                }
+            }
+        }
     }
 }
