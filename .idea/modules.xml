@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.codemonkeyfactory.test.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/com.codemonkeyfactory.test.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.codemonkeyfactory.test.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.codemonkeyfactory.test.buildSrc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.codemonkeyfactory.test.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.codemonkeyfactory.test.buildSrc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging-test/com.codemonkeyfactory.test.logging-test.iml" filepath="$PROJECT_DIR$/.idea/modules/logging-test/com.codemonkeyfactory.test.logging-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging-test/com.codemonkeyfactory.test.logging-test.integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/logging-test/com.codemonkeyfactory.test.logging-test.integrationTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging-test/com.codemonkeyfactory.test.logging-test.main.iml" filepath="$PROJECT_DIR$/.idea/modules/logging-test/com.codemonkeyfactory.test.logging-test.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging-test/com.codemonkeyfactory.test.logging-test.test.iml" filepath="$PROJECT_DIR$/.idea/modules/logging-test/com.codemonkeyfactory.test.logging-test.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.codemonkeyfactory.test.test-suite.iml" filepath="$PROJECT_DIR$/.idea/modules/com.codemonkeyfactory.test.test-suite.iml" />
+    </modules>
+  </component>
+</project>
