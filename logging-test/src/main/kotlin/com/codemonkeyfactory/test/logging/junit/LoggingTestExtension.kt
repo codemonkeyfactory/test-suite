@@ -5,7 +5,6 @@ import org.junit.jupiter.api.extension.AfterTestExecutionCallback
 import org.junit.jupiter.api.extension.BeforeTestExecutionCallback
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.platform.commons.support.AnnotationSupport
-import java.util.*
 
 class LoggingTestExtension : BeforeTestExecutionCallback, AfterTestExecutionCallback {
     override fun beforeTestExecution(extensionContext: ExtensionContext) {
@@ -22,15 +21,15 @@ class LoggingTestExtension : BeforeTestExecutionCallback, AfterTestExecutionCall
 
     private fun getLoggingSpyLifeCycleManager(extensionContext: ExtensionContext): LoggingSpyManager<*, *> {
         val testMethod = extensionContext.requiredTestMethod
-        val optionalLoggingTest: Optional<LoggingTest> = AnnotationSupport.findAnnotation(testMethod, LoggingTest::class.java)
-        if (optionalLoggingTest.isEmpty) {
-            throw LoggingTestMissingException()
-        }
-        val optionalLoggingTestSpyManager: Optional<LoggingTestSpyManager>  =
+        AnnotationSupport.findAnnotation(testMethod, LoggingTest::class.java)
+            .orElseThrow {
+                LoggingTestMissingException()
+            }
+        val loggingTestSpyManager =
             AnnotationSupport.findAnnotation(testMethod, LoggingTestSpyManager::class.java)
-        if (optionalLoggingTestSpyManager.isEmpty) {
-            throw LoggingTestSpyManagerMissingException()
-        }
-        return optionalLoggingTestSpyManager.get().value.java.getDeclaredConstructor().newInstance()
+                .orElseThrow {
+                    LoggingTestSpyManagerMissingException()
+                }
+        return loggingTestSpyManager.value.java.getDeclaredConstructor().newInstance()
     }
 }
