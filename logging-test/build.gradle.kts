@@ -81,12 +81,22 @@ tasks {
         useJUnitPlatform()
     }
 
+    jacocoTestCoverageVerification {
+        violationRules {
+            rule {
+                limit {
+                    minimum = BigDecimal.valueOf(0.2)
+                }
+            }
+        }
+    }
+
     val integrationTest = getByName(integrationTestName) {
         mustRunAfter(getByName("test"))
     }
 
-    getByName("check") {
-        dependsOn(integrationTest)
+    check {
+        dependsOn(integrationTest, jacocoTestCoverageVerification)
     }
 }
 
