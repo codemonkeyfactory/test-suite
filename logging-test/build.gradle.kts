@@ -61,7 +61,7 @@ dependencies {
 val kotlinApiVersion by extra { "1.3" }
 val kotlinLanguageVersion by extra { "1.3" }
 val kotlinJvmTarget by extra { "1.8" }
-val kotlinFreeCompilerArgs by extra { listOf("-version", "-Xjsr305=strict") }
+//val kotlinFreeCompilerArgs by extra { listOf("-version", "-Xjsr305=strict") }
 
 jacoco {
     toolVersion = jacocoVersion
@@ -73,7 +73,7 @@ tasks {
             apiVersion = kotlinApiVersion
             languageVersion = kotlinLanguageVersion
             jvmTarget = kotlinJvmTarget
-            freeCompilerArgs = kotlinFreeCompilerArgs
+//            freeCompilerArgs = kotlinFreeCompilerArgs
         }
     }
 
