@@ -6,3 +6,11 @@ before_install:
   - chmod +x gradle/wrapper/gradle-wrapper.jar
 script:
   - ./gradlew test build --info
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  bundler: true
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
