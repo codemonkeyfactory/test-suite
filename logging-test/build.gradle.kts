@@ -6,6 +6,7 @@ plugins {
     kotlin("kapt")
     id("org.unbroken-dome.test-sets")
     jacoco
+    id("org.sonarqube")
     id("maven-publish")
 }
 
@@ -96,7 +97,14 @@ tasks {
     }
 
     check {
-        dependsOn(integrationTest, jacocoTestCoverageVerification)
+        dependsOn(integrationTest, jacocoTestCoverageVerification, sonarqube)
+    }
+}
+
+sonarqube {
+    properties {
+        property("sonar.projectKey", "com.codemonkeyfactory.test.logging")
+        property("sonar.projectName", "CodeMonkeyFactory Logging Test")
     }
 }
 

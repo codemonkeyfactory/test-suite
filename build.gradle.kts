@@ -3,12 +3,14 @@ plugins {
     val kotlinVersion = "1.3.21"
     val dokkaVersion = "0.9.17"
     val testSetsVersion = "2.1.1"
+    val sonarQubeVersion = "2.7"
 
     id("io.spring.dependency-management") version springDmVersion apply false
     kotlin("jvm") version kotlinVersion apply false
     kotlin("kapt") version kotlinVersion apply false
     id("org.jetbrains.dokka") version dokkaVersion apply false
     id("org.unbroken-dome.test-sets") version testSetsVersion apply false
+    id("org.sonarqube") version sonarQubeVersion apply false
 }
 
 val gradleVersion by extra("5.2.1")
