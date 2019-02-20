@@ -112,7 +112,7 @@ sonarqube {
     properties {
         property("sonar.projectKey", "com.codemonkeyfactory.test.logging")
         property("sonar.projectName", "CodeMonkeyFactory Logging Test")
-        property("sonar.coverage.exclusions", "**/*ConstantsKt*")
+        property("sonar.coverage.exclusions", "**/*Constants.kt")
     }
 }
 
