@@ -22,12 +22,12 @@ class LoggingTestExtension : BeforeTestExecutionCallback, AfterTestExecutionCall
     private fun getLoggingSpyLifeCycleManager(extensionContext: ExtensionContext): LoggingSpyManager<*, *> {
         val testMethod = extensionContext.requiredTestMethod
         val optionalLoggingTest = AnnotationSupport.findAnnotation(testMethod, LoggingTest::class.java)
-        if (optionalLoggingTest.isEmpty) {
+        if (optionalLoggingTest.isEmpty()) {
             throw LoggingTestMissingException()
         }
         val optionalLoggingTestSpyManager =
             AnnotationSupport.findAnnotation(testMethod, LoggingTestSpyManager::class.java)
-        if (optionalLoggingTestSpyManager.isEmpty) {
+        if (optionalLoggingTestSpyManager.isEmpty()) {
             throw LoggingTestSpyManagerMissingException()
         }
         return optionalLoggingTestSpyManager.get().value.java.getDeclaredConstructor().newInstance()
