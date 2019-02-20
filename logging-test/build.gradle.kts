@@ -92,12 +92,19 @@ tasks {
         }
     }
 
+    jacocoTestReport {
+        reports {
+            xml.isEnabled = true
+            html.isEnabled = false
+        }
+    }
+
     val integrationTest = getByName(integrationTestName) {
         mustRunAfter(getByName("test"))
     }
 
     check {
-        dependsOn(integrationTest, jacocoTestCoverageVerification, sonarqube)
+        dependsOn(integrationTest, jacocoTestCoverageVerification, jacocoTestReport)
     }
 }
 
