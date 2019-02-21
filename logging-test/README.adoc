@@ -12,10 +12,10 @@ endif::env-github[]
 :uri-repo: https://github.com/codemonkeyfactory/test-suite
 :uri-build-status: https://travis-ci.org/codemonkeyfactory/test-suite
 :img-build-status: https://travis-ci.org/codemonkeyfactory/test-suite.svg?branch=master
-:uri-sonarcloud: https://sonarcloud.io/dashboard?id=com.codemonkeyfactory.test.logging
-:img-reliability-rating: https://sonarcloud.io/api/project_badges/measure?project=com.codemonkeyfactory.test.logging&metric=reliability_rating
-:img-security-rating: https://sonarcloud.io/api/project_badges/measure?project=com.codemonkeyfactory.test.logging&metric=security_rating
-:img-coverage: https://sonarcloud.io/api/project_badges/measure?project=com.codemonkeyfactory.test.logging&metric=coverage
+:uri-sonarcloud: https://sonarcloud.io/dashboard?id=com.github.codemonkeyfactory.test.logging
+:img-reliability-rating: https://sonarcloud.io/api/project_badges/measure?project=com.github.codemonkeyfactory.test.logging&metric=reliability_rating
+:img-security-rating: https://sonarcloud.io/api/project_badges/measure?project=com.github.codemonkeyfactory.test.logging&metric=security_rating
+:img-coverage: https://sonarcloud.io/api/project_badges/measure?project=com.github.codemonkeyfactory.test.logging&metric=coverage
 
 ifdef::status[]
 image:{img-build-status}[Build Status Badge,link={uri-build-status}]

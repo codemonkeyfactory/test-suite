@@ -38,8 +38,6 @@ tasks {
 }
 
 allprojects {
-    group = "com.codemonkeyfactory.test"
-
     repositories {
         mavenLocal()
         mavenCentral()

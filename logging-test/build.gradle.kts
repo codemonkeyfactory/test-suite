@@ -1,5 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+group = "com.github.codemonkeyfactory.test.logging"
 version = "1.0.0"
 
 plugins {
@@ -112,7 +113,7 @@ tasks {
 
 sonarqube {
     properties {
-        property("sonar.projectKey", "com.codemonkeyfactory.test.logging")
+        property("sonar.projectKey", "com.github.codemonkeyfactory.test.logging")
         property("sonar.projectName", "CodeMonkeyFactory Logging Test")
         property("sonar.coverage.exclusions", "**/*Constants.kt")
     }
