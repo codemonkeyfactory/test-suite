@@ -1,6 +1,7 @@
 = Logging Test
 :source-highlighter: highlights
 :toc: preamble
+:env-github:
 ifdef::env-github[]
 :!toc-title:
 :status:
@@ -10,7 +11,8 @@ endif::env-github[]
 :project-name: Logging Test
 // URIS
 :uri-repo: https://github.com/codemonkeyfactory/test-suite
-:uri-build-status: https://travis-ci.org/codemonkeyfactory/test-suite.svg?branch=master
+:uri-build-status: https://travis-ci.org/codemonkeyfactory/test-suite
+:img-build-status: https://travis-ci.org/codemonkeyfactory/test-suite.svg?branch=master
 
 ifdef::status[]
 image:{img-build-status}[Build Status Badge,link={uri-build-status}]
@@ -23,8 +25,8 @@ It works by capturing the log message called through the log API function.
 
 Copy the {uri-repo}[GitHub repository URL] and use the git clone command.
 
-//[subs="attributes+"]
-$ git clone {uri-repo}
+[subs="attributes+"]
+ $ git clone {uri-repo}
 
 //== Getting Started
 
