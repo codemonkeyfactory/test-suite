@@ -1,18 +1,13 @@
 = Test Suite
-:source-highlighter: highlightks
-:toc:
+// Settings
+:source-highlighter: highlights
+:toc: preamble
+ifdef::env-github[]
+:!toc-title:
+:outfilesuffix: .adoc
+endif::env-github[]
 
-:hardbreaks:
-
-[.details]
---
-*Version*: 0.1
-*Date*: 2019-02-14
---
-
-:!hardbreaks:
-
-Test suite helper library
+Test suite helper library.
 
 == Components
 

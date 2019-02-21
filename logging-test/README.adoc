@@ -1,7 +1,33 @@
 = Logging Test
+:source-highlighter: highlights
+:toc: preamble
+ifdef::env-github[]
+:!toc-title:
+:status:
+:outfilesuffix: .adoc
+endif::env-github[]
+// ALIASES
+:project-name: Logging Test
+// URIS
+:uri-repo: https://github.com/codemonkeyfactory/test-suite
+:uri-build-status: https://travis-ci.org/codemonkeyfactory/test-suite.svg?branch=master
 
-== Getting Started
+ifdef::status[]
+image:{img-build-status}[Build Status Badge,link={uri-build-status}]
+endif::status[]
 
-== Installing
+{project-name} is a test helper for checking logging messages are properly logged for methods under test. +
+It works by capturing the log message called through the log API function.
 
-== Build
+== Getting the Source Code
+
+Copy the {uri-repo}[GitHub repository URL] and use the git clone command.
+
+//[subs="attributes+"]
+$ git clone {uri-repo}
+
+//== Getting Started
+
+//== Installing
+
+//== Build
