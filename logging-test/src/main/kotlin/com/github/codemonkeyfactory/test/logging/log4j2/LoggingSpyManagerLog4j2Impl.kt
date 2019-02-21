@@ -8,7 +8,7 @@ import org.apache.logging.log4j.core.LogEvent
 import org.apache.logging.log4j.core.LoggerContext
 
 /**
- * [LoggingSpyManager] implementation for Log4j2 API.
+ * LoggingSpyManager implementation for Log4j2 API.
  */
 class LoggingSpyManagerLog4j2Impl : LoggingSpyManager<Level, LogEvent> {
     private val observableAppender = InMemoryObservableAppender("observable")
@@ -44,5 +44,10 @@ class LoggingSpyManagerLog4j2Impl : LoggingSpyManager<Level, LogEvent> {
 
     override fun getLoggingSpy(): LoggingSpy<Level, LogEvent> = loggingSpy
 
+    /**
+     * Get the default logger context.
+     *
+     * @return Logger context
+     */
     private fun getLoggerContext(): LoggerContext = LogManager.getContext(false) as LoggerContext
 }

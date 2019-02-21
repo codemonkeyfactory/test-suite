@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":logging-test:integrationTest" external.linked.project.path="$MODULE_DIR$/../../../logging-test" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.github.codemonkeyfactory.test.logging" external.system.module.type="sourceSet" external.system.module.version="1.0.0" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.6" useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../logging-test/build/classes/kotlin/integrationTest" />
+          <option name="classpath" value="$MODULE_DIR$/../../../logging-test/build/tmp/kapt3/classes/main:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.21/d0634d54452abc421db494ad32dd215e6591c49f/kotlin-stdlib-jdk8-1.3.21.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/io.mockk/mockk/1.9/f8f282214611e16b7004b47e0a69d0453c6ac2e8/mockk-1.9.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/io.mockk/mockk-dsl-jvm/1.9/d248dd54e1e83622a1786a2070dbf7bb8ebfedd2/mockk-dsl-jvm-1.9.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3.21/d0d5ff2ac2ebd8a42697af41e20fc225a23c5d3b/kotlin-reflect-1.3.21.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.3.2/69350316a14c46d8f6c4c909e469ec9edf58c4f8/junit-jupiter-engine-5.3.2.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.3.2/3602b523ffae9dabc04c329d73ab39ab04b3cbe2/junit-jupiter-api-5.3.2.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.11.1/592a48674c926b01a9a747c7831bcd82a9e6d6e4/log4j-core-2.11.1.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j-impl/2.11.1/4b41b53a3a2d299ce381a69d165381ca19f62912/log4j-slf4j-impl-2.11.1.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.11.1/268f0fe4df3eefe052b57c87ec48517d64fb2a10/log4j-api-2.11.1.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/io.github.microutils/kotlin-logging/1.6.23/46f28c1ec251c748d9fcfa7977f0fc1274f93d64/kotlin-logging-1.6.23.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.9.8/a1c807329eb0c75976aeb5961a506b3516ffeae3/jackson-dataformat-yaml-2.9.8.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.8/11283f21cc480aa86c4df7a0a3243ec508372ed2/jackson-databind-2.9.8.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.11.1/fdac3217b804d6900fa3650f17b5cb48e620b140/assertj-core-3.11.1.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.21/d207ce2c9bcf17dc8e51bab4dbfdac4d013e7138/kotlin-stdlib-jdk7-1.3.21.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.21/4bcc2012b84840e19e1e28074284cac908be0295/kotlin-stdlib-1.3.21.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.3.2/c54bc1d4654bd1ef15fccf512ce664184085969/junit-platform-engine-1.3.2.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.3.2/378d1d1b162426ad031522f6d51e3bf28d1631a4/junit-platform-commons-1.3.2.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/3ef5276905e36f4d8055fe3cb0bdcc7503ffc85d/apiguardian-api-1.0.0.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.1/efd9f971e91074491ea55b19f67b13470cf4fcdd/opentest4j-1.1.1.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/io.github.microutils/kotlin-logging-common/1.6.23/410ff3257c01bc46fe529ba9a6eb5ea073413ca8/kotlin-logging-common-1.6.23.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.23/ec62d74fe50689c28c0ff5b35d3aebcaa8b5be68/snakeyaml-1.23.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.8/f5a654e4675769c716e5b387830d19b501ca191/jackson-core-2.9.8.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.9.0/7c10d545325e3a6e72e06381afe469fd40eb701/jackson-annotations-2.9.0.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/io.mockk/mockk-common/1.9/9ea66f1ea2bd63c5dee2009fdc5f8ef52a724672/mockk-common-1.9.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/io.mockk/mockk-agent-jvm/1.9/85e40e84346fd8c9a610ecc9ab89fdf95b669916/mockk-agent-jvm-1.9.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.21/f30e4a9897913e53d778f564110bafa1fef46643/kotlin-stdlib-common-1.3.21.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/io.mockk/mockk-dsl/1.9/fc5665078f61cc01a07477925e731e1fd9831bd1/mockk-dsl-1.9.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/io.mockk/mockk-agent-common/1.9/47cfd74dab4dc5512bf73bbae9fb1743da864953/mockk-agent-common-1.9.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/io.mockk/mockk-agent-api/1.9/67339a5ad6d94681b7b9abaf3c6bdbad3b4d9a47/mockk-agent-api-1.9.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.6/639033469776fd37c08358c6b92a4761feb2af4b/objenesis-2.6.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.9.3/f32e510b239620852fc9a2387fac41fd053d6a4d/byte-buddy-1.9.3.jar:/Users/kiongku/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.9.3/f5b78c16cf4060664d80b6ca32d80dca4bd3d264/byte-buddy-agent-1.9.3.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="logging-test_integrationTest" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output-test url="file://$MODULE_DIR$/../../../logging-test/out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../logging-test/build/generated/source/kapt/integrationTest">
+      <sourceFolder url="file://$MODULE_DIR$/../../../logging-test/build/generated/source/kapt/integrationTest" isTestSource="true" generated="true" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../logging-test/build/generated/source/kaptKotlin/integrationTest">
+      <sourceFolder url="file://$MODULE_DIR$/../../../logging-test/build/generated/source/kaptKotlin/integrationTest" isTestSource="true" generated="true" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../logging-test/src/integration-test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../logging-test/src/integration-test/kotlin" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../logging-test/src/integration-test/resources" type="java-test-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="com.github.codemonkeyfactory.test.logging.logging-test.main" />
+    <orderEntry type="module-library">
+      <library name="Gradle: kaptGeneratedClasses">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../logging-test/build/tmp/kapt3/classes/integrationTest" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.21" level="project" />
+    <orderEntry type="library" name="Gradle: io.mockk:mockk:1.9" level="project" />
+    <orderEntry type="library" name="Gradle: io.mockk:mockk-dsl-jvm:1.9" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.3.21" level="project" />
+    <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.11.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-slf4j-impl:2.11.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.11.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.github.microutils:kotlin-logging:1.6.23" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.8" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.8" level="project" />
+    <orderEntry type="library" name="Gradle: org.assertj:assertj-core:3.11.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.21" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.21" level="project" />
+    <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-engine:1.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-commons:1.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.apiguardian:apiguardian-api:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.opentest4j:opentest4j:1.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.github.microutils:kotlin-logging-common:1.6.23" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" name="Gradle: org.yaml:snakeyaml:1.23" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.8" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.mockk:mockk-common:1.9" level="project" />
+    <orderEntry type="library" name="Gradle: io.mockk:mockk-agent-jvm:1.9" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.21" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.mockk:mockk-dsl:1.9" level="project" />
+    <orderEntry type="library" name="Gradle: io.mockk:mockk-agent-common:1.9" level="project" />
+    <orderEntry type="library" name="Gradle: io.mockk:mockk-agent-api:1.9" level="project" />
+    <orderEntry type="library" name="Gradle: org.objenesis:objenesis:2.6" level="project" />
+    <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy:1.9.3" level="project" />
+    <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy-agent:1.9.3" level="project" />
+  </component>
+</module>

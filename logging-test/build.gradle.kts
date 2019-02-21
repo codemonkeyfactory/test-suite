@@ -1,3 +1,4 @@
+import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 group = "com.github.codemonkeyfactory.test.logging"
@@ -10,7 +11,9 @@ plugins {
     id("org.unbroken-dome.test-sets")
     jacoco
     id("org.sonarqube")
-    id("maven-publish")
+    id("org.jetbrains.dokka")
+    `maven-publish`
+    signing
 }
 
 val integrationTestName = "integrationTest"
@@ -66,13 +69,12 @@ val kotlinApiVersion by extra { "1.3" }
 val kotlinLanguageVersion by extra { "1.3" }
 val kotlinJvmTarget by extra { "1.8" }
 val kotlinFreeCompilerArgs by extra { listOf("-version", "-Xjsr305=strict") }
-
-jacoco {
-    toolVersion = jacocoVersion
-}
+val sourcesJarTaskName = "sourcesJar"
+val javadocJarTaskName = "javadocJar"
+val publicationsName = "loggingTest"
 
 tasks {
-    withType<KotlinCompile> {
+    compileKotlin {
         kotlinOptions {
             apiVersion = kotlinApiVersion
             languageVersion = kotlinLanguageVersion
@@ -81,7 +83,7 @@ tasks {
         }
     }
 
-    withType<Test> {
+    test {
         useJUnitPlatform()
     }
 
@@ -103,12 +105,33 @@ tasks {
     }
 
     val integrationTest = getByName(integrationTestName) {
-        mustRunAfter(getByName("test"))
+        mustRunAfter(test)
     }
 
     check {
         dependsOn(integrationTest, jacocoTestCoverageVerification, jacocoTestReport)
     }
+
+    dokka {
+        jdkVersion = 8
+        outputDirectory = "$buildDir/dokka"
+    }
+
+    register<Jar>(sourcesJarTaskName) {
+        group = BasePlugin.BUILD_GROUP
+        from(sourceSets.main.get().allSource)
+        archiveClassifier.set("sources")
+    }
+
+    register<Jar>(javadocJarTaskName) {
+        group = BasePlugin.BUILD_GROUP
+        from(dokka)
+        archiveClassifier.set("javadoc")
+    }
+}
+
+jacoco {
+    toolVersion = jacocoVersion
 }
 
 sonarqube {
@@ -121,13 +144,35 @@ sonarqube {
 
 publishing {
     publications {
-        create<MavenPublication>("loggingTest") {
+        create<MavenPublication>(publicationsName) {
             artifactId = "logging-test"
             from(components["java"])
+            artifact(tasks[sourcesJarTaskName])
+            artifact(tasks[javadocJarTaskName])
             pom {
                 name.set("Logging Test")
                 description.set("Logging Test Support Library")
                 url.set("https://github.com/codemonkeyfactory/test-suite")
+                organization {
+                    name.set("Code Monkey Factory")
+                    url.set("https://github.com/codemonkeyfactory")
+                }
+                scm {
+                    url.set("https://github.com/codemonkeyfactory/test-suite")
+                    connection.set("scm:git:git://github.com/codemonkeyfactory/test-suite.git")
+                    developerConnection.set("scm:git:ssh://git@github.com:codemonkeyfactory/test-suite.git")
+                }
+                issueManagement {
+                    system.set("GitHub")
+                    url.set("https://github.com/codemonkeyfactory/test-suite/issues")
+                }
+                licenses {
+                    license {
+                        name.set("MIT License")
+                        url.set("https://github.com/codemonkeyfactory/test-suite/blob/master/LICENSE")
+                        distribution.set("repo")
+                    }
+                }
                 developers {
                     developer {
                         id.set("kiongku")
@@ -135,12 +180,19 @@ publishing {
                         email.set("kiongku.github@gmail.com")
                     }
                 }
-                scm {
-                    url.set("https://github.com/codemonkeyfactory/test-suite")
-                    connection.set("scm:git:git://github.com/codemonkeyfactory/test-suite.git")
-                    developerConnection.set("scm:git:git@github.com:codemonkeyfactory/test-suite.git")
-                }
             }
         }
     }
+    repositories {
+        maven {
+            url = uri("https://oss.sonatype.org/service/local/staging/deploy/maven2")
+            credentials {
+
+            }
+        }
+    }
+}
+
+signing {
+    sign(publishing.publications[publicationsName])
 }

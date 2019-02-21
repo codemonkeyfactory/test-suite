@@ -31,7 +31,7 @@ val jacocoVersion by extra { "0.8.3" }
 tasks {
     val gradleVersionExtra = gradleVersion // gradleVersion is shadowed inside wrapper task
 
-    withType<Wrapper> {
+    wrapper {
         gradleVersion = gradleVersionExtra
         distributionType = Wrapper.DistributionType.ALL
     }

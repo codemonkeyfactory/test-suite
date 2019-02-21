@@ -3,7 +3,7 @@ package com.github.codemonkeyfactory.test.logging.junit
 import com.github.codemonkeyfactory.test.logging.LoggingTestException
 
 /**
- * [LoggingTestException] for JUnit
+ * LoggingTestException for JUnit
  */
 open class LoggingTestJunitException(
     message: String,

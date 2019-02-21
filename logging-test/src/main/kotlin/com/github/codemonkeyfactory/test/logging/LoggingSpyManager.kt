@@ -1,7 +1,7 @@
 package com.github.codemonkeyfactory.test.logging
 
 /**
- * Manager for [LoggingSpy].
+ * Manager for LoggingSpy.
  *
  * @param Level Logger level type
  * @param LogEvent Original logger event type

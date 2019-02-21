@@ -3,9 +3,7 @@ package com.github.codemonkeyfactory.test.logging
 /**
  * Base exception for all exceptions of logging test.
  *
- * @constructor Create instance of [LoggingTestException]
- * @param message Exception message
- * @param cause Exception root cause exception
+ * @constructor Create instance of LoggingTestException
  */
 open class LoggingTestException(
     message: String,

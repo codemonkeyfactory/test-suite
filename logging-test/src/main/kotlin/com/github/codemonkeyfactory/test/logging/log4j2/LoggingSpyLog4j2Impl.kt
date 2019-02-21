@@ -6,7 +6,9 @@ import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.core.LogEvent
 
 /**
- * [LoggingSpy] implementation for Log4j2.
+ * LoggingSpy implementation for Log4j2.
+ *
+ * @property appender Observable appender to use by the spy
  */
 class LoggingSpyLog4j2Impl(
     private val appender: InMemoryObservableAppender

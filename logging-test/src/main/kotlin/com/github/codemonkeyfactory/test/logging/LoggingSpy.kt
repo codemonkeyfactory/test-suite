@@ -15,10 +15,10 @@ interface LoggingSpy<Level, LogEvent> {
     fun getLogs(): List<CapturedLog<Level, LogEvent>>
 
     /**
-     * Get logs captured by the spy with the specified [level].
+     * Get logs captured by the spy with the specified level.
      *
-     * @param level Logger level type of captured logs
-     * @return Show all captured logs by the spy of the specified [level]
+     * @param level Logger level type of captured logs, never null
+     * @return Show all captured logs by the spy of the specified level
      */
     fun getLogs(level: Level): List<CapturedLog<Level, LogEvent>> {
         return getLogs().asSequence()
@@ -27,11 +27,11 @@ interface LoggingSpy<Level, LogEvent> {
     }
 
     /**
-     * Get logs captured by the spy with the specified [level] and [logger name][loggerName].
+     * Get logs captured by the spy with the specified level and logger name.
      *
-     * @param level Logger level type of captured logs
-     * @param loggerName Logger name of captured logs
-     * @return Show all captured logs by the spy of the specified [level] and specified [logger name][loggerName]
+     * @param level Logger level type of captured logs, never null
+     * @param loggerName Logger name of captured logs, never null
+     * @return Show all captured logs by the spy of the specified level and specified logger name
      */
     fun getLogs(level: Level, loggerName: String): List<CapturedLog<Level, LogEvent>> {
         return getLogs().asSequence()
