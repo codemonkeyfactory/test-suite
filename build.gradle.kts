@@ -39,7 +39,6 @@ tasks {
 
 allprojects {
     group = "com.codemonkeyfactory.test"
-    version = "1.0.0.SNAPSHOT"
 
     repositories {
         mavenLocal()

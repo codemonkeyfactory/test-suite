@@ -1,5 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+version = "1.0.0"
+
 plugins {
     id("io.spring.dependency-management")
     kotlin("jvm")
@@ -129,7 +131,7 @@ publishing {
                     developer {
                         id.set("kiongku")
                         name.set("Wai Keung Yiu Man Lung")
-                        email.set("kiongku@users.noreply.github.com")
+                        email.set("kiongku.github@gmail.com")
                     }
                 }
                 scm {
