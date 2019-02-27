@@ -188,6 +188,8 @@ GitHub.sublime-settings
 .idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/*.iml
+.idea/modules.xml
 .idea/**/gradle.xml
 .idea/**/libraries
 
