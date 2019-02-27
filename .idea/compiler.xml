@@ -7,6 +7,11 @@
       <module name="com.codemonkeyfactory.test.logging-test.integrationTest" target="11" />
       <module name="com.codemonkeyfactory.test.logging-test.main" target="11" />
       <module name="com.codemonkeyfactory.test.logging-test.test" target="11" />
+      <module name="com.github.codemonkeyfactory.test.logging.logging-test.integrationTest" target="1.8" />
+      <module name="com.github.codemonkeyfactory.test.logging.logging-test.main" target="1.8" />
+      <module name="com.github.codemonkeyfactory.test.logging.logging-test.test" target="1.8" />
+      <module name="test-suite.buildSrc.main" target="1.8" />
+      <module name="test-suite.buildSrc.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
