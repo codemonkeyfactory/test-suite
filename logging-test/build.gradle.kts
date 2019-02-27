@@ -1,6 +1,3 @@
-import org.jetbrains.dokka.gradle.DokkaTask
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 group = "com.github.codemonkeyfactory.test.logging"
 version = "1.0.0"
 
@@ -69,6 +66,7 @@ val kotlinApiVersion by extra { "1.3" }
 val kotlinLanguageVersion by extra { "1.3" }
 val kotlinJvmTarget by extra { "1.8" }
 val kotlinFreeCompilerArgs by extra { listOf("-version", "-Xjsr305=strict") }
+
 val sourcesJarTaskName = "sourcesJar"
 val javadocJarTaskName = "javadocJar"
 val publicationsName = "loggingTest"
@@ -185,9 +183,12 @@ publishing {
     }
     repositories {
         maven {
+            val sonatypeUsername: String by project
+            val sonatypePassword: String by project
             url = uri("https://oss.sonatype.org/service/local/staging/deploy/maven2")
             credentials {
-
+                username = sonatypeUsername
+                password = sonatypePassword
             }
         }
     }

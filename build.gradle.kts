@@ -44,3 +44,18 @@ allprojects {
         jcenter()
     }
 }
+
+// set signing properties if tasks requires signing
+gradle.taskGraph.whenReady {
+    if (allTasks.any { it is Sign }) {
+        val signingKeyId: String by project
+        val signingSecretKeyRingFile: String by project
+        val signingPassword: String by project
+
+        allprojects {
+            extra["signing.keyId"] = signingKeyId
+            extra["signing.secretKeyRingFile"] = signingSecretKeyRingFile
+            extra["signing.password"] = signingPassword
+        }
+    }
+}
