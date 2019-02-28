@@ -117,6 +117,7 @@ tasks {
 
     register<Jar>(sourcesJarTaskName) {
         group = BasePlugin.BUILD_GROUP
+        description = "Assembles a jar containing the sources"
         from(sourceSets.main.get().allSource)
         archiveClassifier.set("sources")
     }
@@ -185,7 +186,11 @@ publishing {
         maven {
             val sonatypeUsername: String by project
             val sonatypePassword: String by project
-            url = uri("https://oss.sonatype.org/service/local/staging/deploy/maven2")
+            if (project.version.toString().isSnapshot()) {
+                url = uri("https://oss.sonatype.org/content/repositories/snapshots")
+            } else if (project.version.toString().isRelease()) {
+                url = uri("https://oss.sonatype.org/service/local/staging/deploy/maven2")
+            }
             credentials {
                 username = sonatypeUsername
                 password = sonatypePassword
@@ -196,4 +201,12 @@ publishing {
 
 signing {
     sign(publishing.publications[publicationsName])
+}
+
+tasks {
+    getByName("publishLoggingTestPublicationToMavenRepository") {
+        onlyIf {
+            project.version.toString().isSnapshot() || project.version.toString().isRelease()
+        }
+    }
 }
