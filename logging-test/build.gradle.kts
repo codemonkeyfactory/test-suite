@@ -137,7 +137,6 @@ sonarqube {
     properties {
         property("sonar.projectKey", "com.github.codemonkeyfactory.test.logging")
         property("sonar.projectName", "CodeMonkeyFactory Logging Test")
-        property("sonar.junit.reportPaths", "build/test-results/test,build/test-results/integrationTest")
         property("sonar.coverage.exclusions", "**/*Constants.kt")
     }
 }
