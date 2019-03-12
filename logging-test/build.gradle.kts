@@ -81,10 +81,6 @@ tasks {
         }
     }
 
-    test {
-        useJUnitPlatform()
-    }
-
     jacocoTestCoverageVerification {
         violationRules {
             rule {
@@ -104,6 +100,10 @@ tasks {
 
     val integrationTest = getByName(integrationTestName) {
         mustRunAfter(test)
+    }
+    
+    withType<Test> {
+        useJUnitPlatform()
     }
 
     check {
